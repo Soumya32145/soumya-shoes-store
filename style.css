@@ -1070,31 +1070,36 @@ body.pink .btn-col.active {
 /* ================= MOBILE ================= */
 @media (max-width: 768px){
 
+   @media (max-width: 768px){
+
    .arrival .grid-wrapper{
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
       justify-items: center;
+      align-items: stretch;
    }
 
    .arrival .col{
       width: 100%;
       max-width: 100%;
       padding: 14px;
-   }
-
-   /* hidden items center correctly when shown */
-   .arrival .col:not(.hidden){
-      justify-self: center;
+      height: 100%;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
    }
 
    .arrival .col img{
       height: 140px;
+      object-fit: contain;
    }
 
    .quick-view{
       font-size: 11px;
       padding: 5px 10px;
    }
+}
 }
 /* ================= COLLECTION ITEM ================= */
 
